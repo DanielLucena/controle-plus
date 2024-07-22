@@ -9,7 +9,9 @@
 		"ghcr.io/devcontainers/features/node:1": {}
 	},
 	"forwardPorts": [
-		5432
+		5432,
+		5173,
+		8080
 	],
 	"customizations": {
 		"vscode": {
