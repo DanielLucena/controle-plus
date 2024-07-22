@@ -1,3 +1,6 @@
 [submodule "mercearia"]
 	path = mercearia
 	url = git@github.com:DanielLucena/mercearia.git
+[submodule "controle-plus-frontend"]
+	path = controle-plus-frontend
+	url = git@github.com:DanielLucena/controle-plus-frontend.git
