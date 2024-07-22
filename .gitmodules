@@ -1,0 +1,3 @@
+[submodule "mercearia"]
+	path = mercearia
+	url = git@github.com:DanielLucena/mercearia.git
