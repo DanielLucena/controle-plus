@@ -24,9 +24,10 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/fornecedor")
-// @Tag(name = "Fornecedor")
-// @CrossOrigin(origins = "*")
+@Tag(name = "Fornecedor")
+@CrossOrigin(origins = "*")
 public class FornecedorController {
+
     @Autowired
     private FornecedorService service;
 
@@ -45,7 +46,7 @@ public class FornecedorController {
     }
 
     @Operation(summary = "Recupera um fornecedor pelo ID", method = "GET")
-    @GetMapping("{id}")
+    @GetMapping(value = "/{id}")
     public Fornecedor getById(@PathVariable Integer id) {
         return service.getFornecedorById(id);
     }
