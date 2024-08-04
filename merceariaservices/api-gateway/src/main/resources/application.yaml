@@ -19,6 +19,10 @@ spring:
               uri: lb://user
               predicates:
                 - Path=/api/usuario/**
+            - id: oauth
+              uri: lb://oauth
+              predicates:
+                - Path=/api/oauth/**
             # httpclient:
             #     connect-timeout: 10000
 
