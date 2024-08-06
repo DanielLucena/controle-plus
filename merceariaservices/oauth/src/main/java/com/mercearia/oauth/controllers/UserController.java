@@ -12,7 +12,7 @@ import com.mercearia.oauth.model.User;
 import com.mercearia.oauth.services.UserService;
 
 @RestController
-@RequestMapping(value = "api/oauth/users")
+@RequestMapping(value = "/users")
 public class UserController {
     @Autowired
     private UserService service;

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.mercearia.oauth.model.User;
 
 @Component
-@FeignClient(name = "user", path = "/api/usuario")
+@FeignClient(name = "user", path ="/users")
 public interface UserFeignClient {
 
     @GetMapping(value = "/search")
