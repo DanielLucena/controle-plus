@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service;
 
 import com.mercearia.user.repository.UserRepository;
 
+import jakarta.transaction.Transactional;
 import jakarta.ws.rs.NotFoundException;
 
 import com.mercearia.user.domain.User;
+import com.mercearia.user.exception.LoginJaCadastradoException;
 
 @Service
 public class UserSevice {
@@ -21,6 +23,14 @@ public class UserSevice {
     }
 
     public User getUserByLogin(String login) {
-        return repository.findByLogin(login);
+        return repository.findByLogin(login).orElse(null);
+    }
+
+    @Transactional
+    public User salvar(User usuario) {
+        User usuarioExistente = repository.findByLogin(usuario.getLogin()).orElse(null);
+        if (usuarioExistente != null)
+            throw new LoginJaCadastradoException(usuarioExistente.getLogin());
+        return repository.save(usuario);
     }
 }

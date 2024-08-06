@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
-@RequestMapping("/api/produto")
+@RequestMapping("/produto")
 @Tag(name = "Produto")
 @CrossOrigin(origins = "*")
 public class ProdutoController {

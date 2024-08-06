@@ -40,4 +40,9 @@ public class UserService implements UserDetailsService{
 		logger.info("Login found: " + username);
 		return user;
     }
+
+    public User save(User user) {
+        return userFeignClient.salvar(user).getBody();
+    }
+    
 }
