@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
-@RequestMapping("/api/usuario")
+@RequestMapping("/users")
 // @Tag(name = "Usuário")
 @CrossOrigin(origins = "*")
 public class UserController {
